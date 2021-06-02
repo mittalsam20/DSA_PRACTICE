@@ -15,9 +15,11 @@ void prime(int n)
             }
         }
     }
-    s for (int i = 2; i < n; i++) if (prime_no[i] == 0)
+
+    for (int i = 2; i < n; i++)
+        if (prime_no[i] == 0)
             cout
-        << i << " ";
+                << i << " ";
 }
 
 int main()
