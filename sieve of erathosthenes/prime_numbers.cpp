@@ -18,8 +18,7 @@ void prime(int n)
 
     for (int i = 2; i < n; i++)
         if (prime_no[i] == 0)
-            cout
-                << i << " ";
+            cout << i << " ";
 }
 
 int main()
