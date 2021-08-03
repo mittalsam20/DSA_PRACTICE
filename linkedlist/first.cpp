@@ -32,6 +32,11 @@ void insertAtTail(node *&head, int val)
 void disp(node *head)
 {
     node *temp = head;
+    if (head == NULL)
+    {
+        cout << "Linked List is empty" << endl;
+        return;
+    }
     while (temp != NULL)
     {
         cout << temp->data << " ";
@@ -68,6 +73,22 @@ void deletion(node *&head, int val)
     // cout << endl
     //      << head->data << endl;
     // cout << temp->next->data;
+
+    if (head == NULL)
+    {
+        cout << "Empty Linked List....Nothing to delete";
+        return;
+    }
+
+    if (head->next == NULL)
+    {
+        // node *todelete = head;
+        // head = head->next;
+        // delete todelete;
+        head = NULL;
+        return;
+    }
+
     if (val == head->data)
     {
         node *todelete = head;
@@ -88,15 +109,14 @@ void deletion(node *&head, int val)
 int main()
 {
     node *head = NULL;
-    insertAtTail(head, 1);
-    insertAtTail(head, 2);
-    insertAtTail(head, 3);
-    disp(head);
+    // insertAtTail(head, 1);
+    // insertAtTail(head, 2);
+    // insertAtTail(head, 3);
+    // disp(head);
     insertAtHead(head, 4);
     disp(head);
     // cout << search(head, 2);
     deletion(head, 4);
-    cout << endl;
     disp(head);
 
     return 0;
