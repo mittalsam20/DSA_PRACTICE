@@ -4,12 +4,13 @@ using namespace std;
 void merge(int arr[], int l, int mid, int r)
 {
     int a[mid - l + 1], b[r - mid]; //temp arrays
+    int i = 0, j = 0, k = l;
+
     for (int i = 0; i < mid - l + 1; i++)
         a[i] = arr[l + i];
     for (int i = 0; i < r - mid; i++)
         b[i] = arr[mid + 1 + i];
 
-    int i = 0, j = 0, k = l;
     while (i < mid - l + 1 && j < r - mid)
     {
         if (a[i] < b[j])
@@ -43,7 +44,7 @@ void mergesort(int arr[], int l, int r)
 {
     if (l < r)
     {
-        int mid = l + r / 2;
+        int mid = (l + r) / 2;
         mergesort(arr, l, mid);
         mergesort(arr, mid + 1, r);
 
@@ -61,4 +62,9 @@ int main()
         cout << arr[i] << " ";
     }
     cout << endl;
+    // return 0;
 }
+
+//time complexity
+
+//
