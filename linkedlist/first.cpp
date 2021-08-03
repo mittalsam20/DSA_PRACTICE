@@ -40,6 +40,13 @@ void disp(node *head)
     cout << endl;
 }
 
+void insertAtHead(node *&head, int val)
+{
+    node *n = new node(val);
+    n->next = head;
+    head = n;
+}
+
 int main()
 {
     node *head = NULL;
@@ -47,5 +54,8 @@ int main()
     insertAtTail(head, 2);
     insertAtTail(head, 3);
     disp(head);
+    insertAtHead(head, 4);
+    disp(head);
+
     return 0;
 }
