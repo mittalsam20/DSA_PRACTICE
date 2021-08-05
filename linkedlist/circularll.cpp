@@ -67,6 +67,38 @@ void disp(node *head)
         << endl;
 }
 
+void delathead(node *&head)
+{
+    node *temp = head;
+    while (temp->next != head)
+    {
+        temp = temp->next;
+    }
+    node *todel = head;
+    temp->next = head->next;
+    head = head->next;
+    delete todel;
+}
+
+void delnode(node *&head, int pos)
+{
+    if (pos == 0)
+    {
+        delathead(head);
+        return;
+    }
+    node *temp = head;
+    int count = 0;
+    while (count != pos - 1)
+    {
+        temp = temp->next;
+        count++;
+    }
+    node *todel = temp->next;
+    temp->next = temp->next->next;
+    delete todel;
+}
+
 int main()
 {
     node *head = NULL;
@@ -78,5 +110,7 @@ int main()
     insertAtHead(head, 9);
     insertAtHead(head, 8);
     insertAtHead(head, 7);
+    disp(head);
+    delnode(head, 0);
     disp(head);
 }
