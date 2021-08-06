@@ -1,31 +1,26 @@
 
 #include <iostream>
 #include <deque>
+#include <vector>
 using namespace std;
 
 int main()
 {
-    deque<int> dq;
-    dq.push_back(1);
-    dq.push_back(2);
-    dq.push_back(3);
-    dq.push_back(4);
-    dq.push_back(5);
-    dq.push_front(6);
-    dq.push_front(7);
-    dq.push_front(8);
+    int n, k;
+    cin >> n >> k;
 
-    for (auto ele : dq)
-        cout << ele << " ";
-    cout << endl;
-    dq.pop_back();
-    for (auto ele : dq)
-        cout << ele << " ";
-    cout << endl;
+    vector<int> a(n);
+    for (auto &ele : a)
+        cin >> ele;
 
-    dq.pop_front();
-    for (auto ele : dq)
-        cout << ele << " ";
-    cout << endl;
-    cout << dq.size();
+    deque<int> q;
+    vector<int> ans;
+
+    for (int i = 0; i < k; i++)
+    {
+        while (!q.empty())
+        {
+            /* code */
+        }
+    }
 }
