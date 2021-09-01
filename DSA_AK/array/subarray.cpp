@@ -12,11 +12,13 @@ int main()
 
     for (int i = 0; i < n; i++)
     {
-        int curr_sum = 0;
+        // int curr_sum = 0;
         for (int j = i; j < n; j++)
         {
-            curr_sum += a[j];
-            cout << curr_sum << endl;
+            // curr_sum += a[j];
+            // cout << curr_sum << endl;
+            cout << a[j] << " ";
         }
+        cout << endl;
     }
 }
